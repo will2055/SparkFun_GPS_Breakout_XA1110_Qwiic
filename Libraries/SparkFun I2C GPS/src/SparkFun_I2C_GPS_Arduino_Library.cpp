@@ -183,7 +183,7 @@ String I2CGPS::createMTKpacket(uint16_t packetType, String dataField)
   //Append any leading zeros
   if (packetType < 100) configSentence += "0";
   if (packetType < 10) configSentence += "0";
-  configSentence += packetType;
+  configSentence += String(packetType);
 
   //Attach any settings
   if (dataField.length() > 0)
